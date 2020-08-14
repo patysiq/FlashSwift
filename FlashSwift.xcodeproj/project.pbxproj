@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B460F3324E6BF7800B6E686 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B460F3224E6BF7800B6E686 /* Constants.swift */; };
+		7B460F3524E6CCE000B6E686 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B460F3424E6CCE000B6E686 /* .swiftlint.yml */; };
 		7B5E983F24E57FF60016804E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E983E24E57FF60016804E /* AppDelegate.swift */; };
 		7B5E984124E57FF60016804E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E984024E57FF60016804E /* SceneDelegate.swift */; };
 		7B5E984924E57FF60016804E /* FlashSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E984724E57FF60016804E /* FlashSwift.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		7B460F3224E6BF7800B6E686 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7B460F3424E6CCE000B6E686 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7B5E983B24E57FF60016804E /* FlashSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5E983E24E57FF60016804E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B5E984024E57FF60016804E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		7B5E983D24E57FF60016804E /* FlashSwift */ = {
 			isa = PBXGroup;
 			children = (
+				7B460F3424E6CCE000B6E686 /* .swiftlint.yml */,
 				7B5E983E24E57FF60016804E /* AppDelegate.swift */,
 				7B5E984024E57FF60016804E /* SceneDelegate.swift */,
 				7BFD4AF324E5FE7000055E23 /* Views */,
@@ -256,6 +259,7 @@
 				7B5E984E24E57FF70016804E /* LaunchScreen.storyboard in Resources */,
 				7BFD4AF724E5FFA800055E23 /* Topics.storyboard in Resources */,
 				7BFD4AF224E5FE5F00055E23 /* TabBar.storyboard in Resources */,
+				7B460F3524E6CCE000B6E686 /* .swiftlint.yml in Resources */,
 				7BFD4AF924E5FFB000055E23 /* Midia.storyboard in Resources */,
 				7BFD4AF524E5FFA000055E23 /* Questions.storyboard in Resources */,
 				7B5E984B24E57FF70016804E /* Assets.xcassets in Resources */,
@@ -295,7 +299,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    echo \"swiftlint already installed in machine\";\n    git diff --cached --name-only | grep \"\\.swift\" | while read filename; do\n        echo \"swiftlinting file $filename\";\n        swiftlint lint --path \"$filename\";\n    done\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

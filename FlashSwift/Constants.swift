@@ -8,7 +8,6 @@
 
 import Foundation
 
-
-struct K {
+struct Cte {
     static let appName = "FlashSwift"
 }
