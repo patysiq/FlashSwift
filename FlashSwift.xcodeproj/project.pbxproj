@@ -155,6 +155,7 @@
 				7B5E983724E57FF60016804E /* Sources */,
 				7B5E983824E57FF60016804E /* Frameworks */,
 				7B5E983924E57FF60016804E /* Resources */,
+				7B53D9E924E6242900DFE8C6 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -273,6 +274,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B53D9E924E6242900DFE8C6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    echo \"swiftlint already installed in machine\";\n    git diff --cached --name-only | grep \"\\.swift\" | while read filename; do\n        echo \"swiftlinting file $filename\";\n        swiftlint lint --path \"$filename\";\n    done\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B5E983724E57FF60016804E /* Sources */ = {
