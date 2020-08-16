@@ -9,6 +9,6 @@
 import Foundation
 
 struct Cte {
-    static let appName = "FlashSwift"
     static let videoCell = "VideoCell"
+    static let ytEmbedUrl = "https://www.youtube.com/embed/"
 }

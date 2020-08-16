@@ -10,7 +10,6 @@ import UIKit
 
 class VideoTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -49,6 +48,13 @@ class VideoTableViewCell: UITableViewCell {
         // Set the thumbnail
         guard self.video!.thumbnail != "" else {return}
         
+        // Check cache before download data
+        if let cachedData = CacheManagerMidia.getVideoCache(self.video!.thumbnail) {
+            // Set the thumbnail imageview
+            self.thumbnailImageView.image = UIImage(data: cachedData)
+            return
+        }
+        
         // Download the thumbnail data
         let url = URL(string: self.video!.thumbnail)
         
@@ -58,6 +64,9 @@ class VideoTableViewCell: UITableViewCell {
         let dataTask = session.dataTask(with: url!) { (data, _, error) in
             
             if error == nil && data != nil {
+                
+                // Save the data in the cache
+                CacheManagerMidia.setVideoCache(url!.absoluteString, data)
                 
                 // Check that the donwloaded url matches the video thumbnail url that this cell is currently set to display
                 if url?.absoluteString != self.video?.thumbnail {

@@ -9,5 +9,5 @@
 import Foundation
 
 struct ApiMidia {
-    static var keyApi = ""
+    static var keyApi = "AIzaSyDw4FIAfnhWOZULJSar31YZ7HSnm0OfcB8"
 }

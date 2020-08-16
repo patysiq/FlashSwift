@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol ModelDelegate {
+protocol ModelDelegate: AnyObject {
     func videosFetched(_ videos:[Video])
 }
 
 class ApiModelMidia {
     
-    var delegate: ModelDelegate?
+    weak var delegate: ModelDelegate?
     
     func getVideos() {
         
