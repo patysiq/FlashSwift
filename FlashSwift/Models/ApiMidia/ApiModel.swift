@@ -25,7 +25,7 @@ class ApiModelMidia {
         for channel in channels {
             
             //Create URL object
-            let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=5&order=date&channelId=\(channel)&key=\(ApiMidia.keyApi)")
+            let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=5&order=date&channelId=\(channel)&key=\(ApiKeys.apiMidia)")
             
             guard url != nil else {
                 return

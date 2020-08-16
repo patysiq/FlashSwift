@@ -16,9 +16,9 @@
 		7B5E984E24E57FF70016804E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5E984C24E57FF70016804E /* LaunchScreen.storyboard */; };
 		7B5E985924E57FF70016804E /* FlashSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E985824E57FF70016804E /* FlashSwiftTests.swift */; };
 		7B5E986424E57FF70016804E /* FlashSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E986324E57FF70016804E /* FlashSwiftUITests.swift */; };
+		7B70F74B24E9826700F4873F /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70F74A24E9826700F4873F /* ApiKeys.swift */; };
 		7B74344424E95C48004F0B73 /* CacheManagerMidia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B74344324E95C48004F0B73 /* CacheManagerMidia.swift */; };
 		7B7652B224E7568E0011DCB6 /* MidiaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652B124E7568E0011DCB6 /* MidiaModel.swift */; };
-		7B7652B424E756A80011DCB6 /* ApiMidia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652B324E756A80011DCB6 /* ApiMidia.swift */; };
 		7B7652B624E78CE50011DCB6 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652B524E78CE50011DCB6 /* ApiModel.swift */; };
 		7B7652B824E78F350011DCB6 /* MidiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652B724E78F350011DCB6 /* MidiaViewController.swift */; };
 		7B7652BB24E7A5F70011DCB6 /* ResponseApiMidia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652BA24E7A5F70011DCB6 /* ResponseApiMidia.swift */; };
@@ -65,9 +65,9 @@
 		7B5E985F24E57FF70016804E /* FlashSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5E986324E57FF70016804E /* FlashSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSwiftUITests.swift; sourceTree = "<group>"; };
 		7B5E986524E57FF70016804E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B70F74A24E9826700F4873F /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		7B74344324E95C48004F0B73 /* CacheManagerMidia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerMidia.swift; sourceTree = "<group>"; };
 		7B7652B124E7568E0011DCB6 /* MidiaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiaModel.swift; sourceTree = "<group>"; };
-		7B7652B324E756A80011DCB6 /* ApiMidia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMidia.swift; sourceTree = "<group>"; };
 		7B7652B524E78CE50011DCB6 /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		7B7652B724E78F350011DCB6 /* MidiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiaViewController.swift; sourceTree = "<group>"; };
 		7B7652BA24E7A5F70011DCB6 /* ResponseApiMidia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseApiMidia.swift; sourceTree = "<group>"; };
@@ -167,6 +167,7 @@
 			children = (
 				7B74344324E95C48004F0B73 /* CacheManagerMidia.swift */,
 				7B460F3224E6BF7800B6E686 /* Constants.swift */,
+				7B70F74A24E9826700F4873F /* ApiKeys.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -195,7 +196,6 @@
 			children = (
 				7B7652B124E7568E0011DCB6 /* MidiaModel.swift */,
 				7B7652BA24E7A5F70011DCB6 /* ResponseApiMidia.swift */,
-				7B7652B324E756A80011DCB6 /* ApiMidia.swift */,
 				7B7652B524E78CE50011DCB6 /* ApiModel.swift */,
 			);
 			path = ApiMidia;
@@ -382,7 +382,6 @@
 				7B5E983F24E57FF60016804E /* AppDelegate.swift in Sources */,
 				7B74344424E95C48004F0B73 /* CacheManagerMidia.swift in Sources */,
 				7B7652B624E78CE50011DCB6 /* ApiModel.swift in Sources */,
-				7B7652B424E756A80011DCB6 /* ApiMidia.swift in Sources */,
 				7BEA64D724E8D04800DCA8F7 /* VideoTableViewCell.swift in Sources */,
 				7B7652BE24E8AB190011DCB6 /* ApiError.swift in Sources */,
 				7B7652BB24E7A5F70011DCB6 /* ResponseApiMidia.swift in Sources */,
@@ -390,6 +389,7 @@
 				7BF2CD4524E96EAD0076249F /* DetailViewController.swift in Sources */,
 				7B5E984124E57FF60016804E /* SceneDelegate.swift in Sources */,
 				7B460F3324E6BF7800B6E686 /* Constants.swift in Sources */,
+				7B70F74B24E9826700F4873F /* ApiKeys.swift in Sources */,
 				7B7652B224E7568E0011DCB6 /* MidiaModel.swift in Sources */,
 				7B7652B824E78F350011DCB6 /* MidiaViewController.swift in Sources */,
 			);
