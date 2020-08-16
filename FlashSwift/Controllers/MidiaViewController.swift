@@ -47,15 +47,12 @@ class MidiaViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cte.videoCell , for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cte.videoCell , for: indexPath) as! VideoTableViewCell // swiftlint:disable:this force_cast
+        
         // Configure the cell with the data
-        
-        //Get the title for the video in question
-        let title = self.videos[indexPath.row].title
-        
-        //cell.setCell(video)
-        
-        cell.textLabel?.text = title
+        let video = self.videos[indexPath.row]
+        cell.setCell(video)
+      
         return cell
     }
     
