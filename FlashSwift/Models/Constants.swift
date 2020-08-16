@@ -10,4 +10,5 @@ import Foundation
 
 struct Cte {
     static let appName = "FlashSwift"
+    static let videoCell = "VideoCell"
 }
