@@ -1,5 +1,3 @@
-
-//
 //  File.swift
 //  FlashSwift
 //
