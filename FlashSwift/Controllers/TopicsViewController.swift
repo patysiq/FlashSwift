@@ -24,7 +24,6 @@ class TopicsViewController: UIViewController {
         guard tableView.indexPathForSelectedRow != nil else {return}
         
         // Get a reference to the tip that was tapped on
-        print("estou aqui")
         
         let selectedTips = tips[tableView.indexPathForSelectedRow!.row].text
         let selectedTipsTitle = tips[tableView.indexPathForSelectedRow!.row].title
