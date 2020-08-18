@@ -13,11 +13,30 @@ class TopicsViewController: UIViewController {
     var tips = TopicsModel.itemsMock()
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Confirm that a tip was selected
+        guard tableView.indexPathForSelectedRow != nil else {return}
+        
+        // Get a reference to the tip that was tapped on
+        print("estou aqui")
+        
+        let selectedTips = tips[tableView.indexPathForSelectedRow!.row].text
+        let selectedTipsTitle = tips[tableView.indexPathForSelectedRow!.row].title
+        
+        // Get a reference to the detail view controller
+        let detailVC = segue.destination as! TipsViewController // swiftlint:disable:this force_cast
+        
+        // Set the video property of the detail view controller
+        detailVC.tips?.text = selectedTips
+        detailVC.tips?.title = selectedTipsTitle
+    }
+    
 }
 
 extension TopicsViewController: UITableViewDataSource, UITableViewDelegate {

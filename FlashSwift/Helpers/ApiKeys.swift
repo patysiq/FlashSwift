@@ -8,5 +8,5 @@
 import Foundation
 
 struct ApiKeys {
-    static var apiMidia = "AIzaSyDw4FIAfnhWOZULJSar31YZ7HSnm0OfcB8"
+    static var apiMidia = "AIzaSyAODQDp3LDJhEQrQrJgZahRIjGOXXasSwk"
 }
