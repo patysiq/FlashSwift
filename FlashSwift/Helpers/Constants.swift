@@ -12,4 +12,5 @@ struct Cte {
     static let videoCell = "videoCell"
     static let ytEmbedUrl = "https://www.youtube.com/embed/"
     static let topicCell = "topicsCell"
+    static let tipsCell = "tipsCell"
 }
