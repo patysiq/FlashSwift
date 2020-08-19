@@ -10,21 +10,26 @@ import UIKit
 
 class TipsViewController: UIViewController {
     
-    var tips: TopicsModel?
-    
     @IBOutlet weak var titleTip: UILabel!
     @IBOutlet weak var tipText: UILabel!
     
+    var selectedTips: String = ""
+    var selectedTipsTitle: String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+       // Clear the fields
+          titleTip.text = ""
+          tipText.text = ""
         
-        // Clear the fields
-        titleTip.text = ""
-        tipText.text = ""
+        // Set the title
+        titleTip.text = selectedTipsTitle
         
+        // Set the description
+        tipText.text = selectedTips
     }
 }

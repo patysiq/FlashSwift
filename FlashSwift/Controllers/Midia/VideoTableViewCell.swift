@@ -70,7 +70,7 @@ class VideoTableViewCell: UITableViewCell {
                 
                 // Check that the donwloaded url matches the video thumbnail url that this cell is currently set to display
                 if url?.absoluteString != self.video?.thumbnail {
-                    // Video cell has been recycled for another video and no longer matches the thumbnail that was downloaded
+                // Video cell has been recycled for another video and no longer matches the thumbnail that was downloaded
                     return
                 }
                 

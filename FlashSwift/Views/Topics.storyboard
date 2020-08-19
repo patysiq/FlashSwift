@@ -58,7 +58,7 @@
                     <navigationItem key="navigationItem" title="Topics" id="7Ix-7v-kcK"/>
                     <connections>
                         <outlet property="tableView" destination="ity-gh-7p1" id="eEc-Vw-JcU"/>
-                        <segue destination="AgC-FL-hKr" kind="show" id="q5k-4x-lhS"/>
+                        <segue destination="AgC-FL-hKr" kind="show" identifier="tipsSegue" id="zX4-Gy-HMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgq-13-kUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

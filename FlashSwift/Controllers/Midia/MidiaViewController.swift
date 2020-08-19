@@ -40,11 +40,7 @@ class MidiaViewController: UIViewController, ModelDelegate {
         // Set the video property of the detail view controller
         detailVC.video = selectedVideo
     }
-
-}
-
-extension MidiaViewController : UITableViewDelegate, UITableViewDataSource {
-
+    
     // MARK: - Model Delegate Methods
         
         func videosFetched(_ videos: [Video]) {
@@ -56,9 +52,12 @@ extension MidiaViewController : UITableViewDelegate, UITableViewDataSource {
             tableView.reloadData()
        
         }
-        
-    // MARK: - TableView Methods
-        
+}
+
+// MARK: - TableView Methods
+
+extension MidiaViewController : UITableViewDelegate, UITableViewDataSource {
+
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return videos.count
         }

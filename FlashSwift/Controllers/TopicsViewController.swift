@@ -11,6 +11,7 @@ import UIKit
 class TopicsViewController: UIViewController {
     
     var tips = TopicsModel.itemsMock()
+    var indexSection : Int = 1
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,27 +19,39 @@ class TopicsViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Confirm that a tip was selected
-        guard tableView.indexPathForSelectedRow != nil else {return}
         
-        // Get a reference to the tip that was tapped on
+        if segue.identifier == Cte.tipsSegue {
+            // Confirm that a tip was selected
+            guard tableView.indexPathForSelectedRow != nil else {return}
+            guard tips[tableView.indexPathForSelectedRow!.item].text[tableView.indexPathForSelectedRow!.row] != nil else {return}
+            
+            // Get a reference to the tip that was tapped on
+            print(tips[tableView.indexPathForSelectedRow!.item].text[tableView.indexPathForSelectedRow!.row])
+            
+            let selectedTips = tips[tableView.indexPathForSelectedRow!.item].text[tableView.indexPathForSelectedRow!.row]
+            let selectedTipsTitle = tips[tableView.indexPathForSelectedRow!.item].title[tableView.indexPathForSelectedRow!.row]
+            
+            // Get a reference to the detail view controller
+            let detailVC = segue.destination as! TipsViewController // swiftlint:disable:this force_cast
+            
+            // Set the video property of the detail view controller
+            detailVC.selectedTips = selectedTips
+            detailVC.selectedTipsTitle = selectedTipsTitle
+            
+        }
         
-        let selectedTips = tips[tableView.indexPathForSelectedRow!.row].text
-        let selectedTipsTitle = tips[tableView.indexPathForSelectedRow!.row].title
-        
-        // Get a reference to the detail view controller
-        let detailVC = segue.destination as! TipsViewController // swiftlint:disable:this force_cast
-        
-        // Set the video property of the detail view controller
-        detailVC.tips?.text = selectedTips
-        detailVC.tips?.title = selectedTipsTitle
     }
     
 }
 
+// MARK: - TableView Methods
+
 extension TopicsViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return tips.count
     }
@@ -66,6 +79,10 @@ extension TopicsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Cte.tipsSegue, sender: self)
     }
     
 }
