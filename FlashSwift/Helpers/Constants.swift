@@ -14,4 +14,7 @@ struct Cte {
     static let topicCell = "topicsCell"
     static let tipsCell = "tipsCell"
     static let tipsSegue = "tipsSegue"
+    static let questionCell = "questionCell"
+    static let urlBaseStackExchange = "https://api.stackexchange.com/"
+    static let pathStackExchange = "2.2/tags/swift/top-answerers/all_time?site=stackoverflow"
 }

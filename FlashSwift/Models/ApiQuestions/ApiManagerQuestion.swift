@@ -8,24 +8,22 @@
 
 import Foundation
 
-protocol ModelDelegate: AnyObject {
-    func videosFetched(_ videos:[Video])
+protocol QuestionDelegate: AnyObject {
+    func questionFetched(_ questions:[Question])
 }
 
-class ApiModelMidia {
+class ApiManagerQuestion {
     
-    weak var delegate: ModelDelegate?
+    weak var delegate: QuestionDelegate?
     
-    func getVideos() {
+    func getQuestions() {
         
-        var allVideos: [Video] = []
-        let channels = ["UC2D6eRvCeMtcF5OGHf1-trw","UCmJi5RdDLgzvkl3Ly0DRMlQ", "UCTfmK7YoPhSkRsIul50_rSA", "UCbTw29mcP12YlTt1EpUaVJw", "UCuP2vJ6kRutQBfRmdcI92mA", ""]
+        var allQuestions: [Question] = []
         
         //Get a data task from the URLSession object
-        for channel in channels {
-            
+    
             //Create URL object
-            let urlString = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=4&order=date&channelId=\(channel)&key=\(ApiKeys.apiMidia)")
+        let urlString = URL(string: "\(Cte.urlBaseStackExchange)\(Cte.pathStackExchange)")
             
             guard let url = urlString else {
                 print(ApiError.invalidUrl)
@@ -51,13 +49,13 @@ class ApiModelMidia {
                     let decoder = JSONDecoder()
                     decoder.dateDecodingStrategy = .iso8601
                     
-                    let response = try decoder.decode(ResponseApiMidia.self, from: data)
+                    let response = try decoder.decode(ResponseApiQuestion.self, from: data)
                     
                     if response.items != nil {
                         DispatchQueue.main.async {
                             // Call the "videosFetched" method of the delegate
-                            allVideos += response.items!
-                            self.delegate?.videosFetched(allVideos)
+                            allQuestions += response.items!
+                            self.delegate?.questionFetched(allQuestions)
                         }
                     }
                     
@@ -70,7 +68,7 @@ class ApiModelMidia {
             }
             //Kick off the task
             dataTask.resume()
-        }
+        
     }
     
 }

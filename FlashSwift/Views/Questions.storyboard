@@ -11,14 +11,41 @@
         <!--Questions-->
         <scene sceneID="cwT-rO-Yof">
             <objects>
-                <viewController id="fKJ-u1-5kt" sceneMemberID="viewController">
+                <viewController id="fKJ-u1-5kt" customClass="QuestionsViewController" customModule="FlashSwift" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BYu-Hs-tnH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jhs-VI-hO2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" name="BG"/>
+                                <color key="separatorColor" name="BG"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="220" id="GZx-vi-Jl6" customClass="QuestionsTableViewCell" customModule="FlashSwift">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GZx-vi-Jl6" id="Rt9-7N-Ye0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="BG"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" name="BG"/>
+                        <constraints>
+                            <constraint firstItem="xTU-4X-nkf" firstAttribute="bottom" secondItem="jhs-VI-hO2" secondAttribute="bottom" id="Y4U-cT-w6J"/>
+                            <constraint firstItem="jhs-VI-hO2" firstAttribute="leading" secondItem="xTU-4X-nkf" secondAttribute="leading" id="Zby-Pd-GKG"/>
+                            <constraint firstItem="jhs-VI-hO2" firstAttribute="top" secondItem="xTU-4X-nkf" secondAttribute="top" id="sKT-Y1-iBW"/>
+                            <constraint firstItem="xTU-4X-nkf" firstAttribute="trailing" secondItem="jhs-VI-hO2" secondAttribute="trailing" id="xi4-qp-LSf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xTU-4X-nkf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Questions" id="caW-ZF-ed8"/>
+                    <connections>
+                        <outlet property="tableView" destination="jhs-VI-hO2" id="m2g-dN-chf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nu-4P-f1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,7 +66,7 @@
                         <color key="barTintColor" name="TabBarBG"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                            <color key="textColor" red="1" green="0.34509803919999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="swiftColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -60,6 +87,9 @@
         </namedColor>
         <namedColor name="TabBarBG">
             <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="swiftColor">
+            <color red="1" green="0.3449999988079071" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

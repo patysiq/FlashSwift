@@ -47,6 +47,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="BG"/>
+                        <color key="tintColor" name="swiftColor"/>
                         <constraints>
                             <constraint firstItem="iQp-aD-bPv" firstAttribute="trailing" secondItem="ity-gh-7p1" secondAttribute="trailing" id="5nB-ta-gOp"/>
                             <constraint firstItem="ity-gh-7p1" firstAttribute="top" secondItem="iQp-aD-bPv" secondAttribute="top" id="jUT-nw-nDY"/>
@@ -94,6 +95,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="BG"/>
+                        <color key="tintColor" name="swiftColor"/>
                         <constraints>
                             <constraint firstItem="j5C-Ab-Zmo" firstAttribute="leading" secondItem="L6M-Xr-wU8" secondAttribute="leading" constant="20" id="F06-vk-ocI"/>
                             <constraint firstItem="L6M-Xr-wU8" firstAttribute="bottom" secondItem="j5C-Ab-Zmo" secondAttribute="bottom" id="F27-MI-feW"/>

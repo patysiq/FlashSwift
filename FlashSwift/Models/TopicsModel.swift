@@ -20,7 +20,7 @@ struct TopicsModel {
         self.text = text
    }
     
-    static func itemsMock() -> [TopicsModel] {
+    static func itemsMock() -> [TopicsModel] { // swiftlint:disable:this function_body_length 
         let itensMock = [
             TopicsModel(
                 section:"Beginners",
