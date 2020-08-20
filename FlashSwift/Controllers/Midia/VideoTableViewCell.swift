@@ -61,29 +61,43 @@ class VideoTableViewCell: UITableViewCell {
         //Get the shared URL Session object
         let session = URLSession.shared
         
-        let dataTask = session.dataTask(with: url!) { (data, _, error) in
+        let dataTask = session.dataTask(with: url!) { (data, response, error) in
             
-            if error == nil && data != nil {
-                
-                // Save the data in the cache
+            guard let response = response as?  HTTPURLResponse else {return}
+            
+            guard let data = data else {return }
+            
+            if error != nil {
+                print(ApiError.couldNotDecode)
+            }
+            
+            switch response.statusCode {
+            case 200:
+                //Save the data in the cache
                 CacheManagerMidia.setVideoCache(url!.absoluteString, data)
                 
                 // Check that the donwloaded url matches the video thumbnail url that this cell is currently set to display
                 if url?.absoluteString != self.video?.thumbnail {
-                    // Video cell has been recycled for another video and no longer matches the thumbnail that was downloaded
+                
+                // Video cell has been recycled for another video and no longer matches the thumbnail that was downloaded
                     return
                 }
                 
                 // Create the image object
-                let image = UIImage(data: data!)
+                let image = UIImage(data: data)
                 
                 // Set the imageview
                 DispatchQueue.main.async {
                     self.thumbnailImageView.image = image
                 }
-                
+            
+            case 404:
+            break
+            default:
+            break
             }
         }
+             
         dataTask.resume()
     }
     

@@ -30,10 +30,10 @@ class DetailMidiaViewController: UIViewController {
         textView.text = ""
         
         // Check if there's video
-        guard video != nil else {return}
+        guard let video = video else {return}
         
         // Create the embed URL
-        let embedUrlString = Cte.ytEmbedUrl + video!.videoId
+        let embedUrlString = Cte.ytEmbedUrl + video.videoId
         
         // Load it into the webview
         let url = URL(string: embedUrlString )
@@ -41,15 +41,15 @@ class DetailMidiaViewController: UIViewController {
         webView.load(request)
         
         // Set the title
-        titleLabel.text = video!.title
+        titleLabel.text = video.title
         
         // Set the date
         let datef = DateFormatter()
         datef.dateFormat = "EEEE, MMM d, yyyyy"
-        dateLabel.text = datef.string(from: video!.publishedAt)
+        dateLabel.text = datef.string(from: video.publishedAt)
         
         // Set the description
-        textView.text = video!.description
+        textView.text = video.description
     }
     
 }
