@@ -26,14 +26,12 @@ class TopicsViewController: UIViewController {
         
         if segue.identifier == Cte.tipsSegue {
             // Confirm that a tip was selected
-            guard tableView.indexPathForSelectedRow != nil else {return}
-            guard tips[tableView.indexPathForSelectedRow!.item].text[tableView.indexPathForSelectedRow!.row] != nil else {return}
-            
+            guard let indexPathForSelectedRow = tableView.indexPathForSelectedRow else { return }
+           
             // Get a reference to the tip that was tapped on
-            print(tips[tableView.indexPathForSelectedRow!.item].text[tableView.indexPathForSelectedRow!.row])
             
-            let selectedTips = tips[tableView.indexPathForSelectedRow!.item].text[tableView.indexPathForSelectedRow!.row]
-            let selectedTipsTitle = tips[tableView.indexPathForSelectedRow!.item].title[tableView.indexPathForSelectedRow!.row]
+            let selectedTips = tips[indexPathForSelectedRow.section].text[indexPathForSelectedRow.row]
+            let selectedTipsTitle = tips[indexPathForSelectedRow.section].title[indexPathForSelectedRow.row]
             
             // Get a reference to the detail view controller
             let detailVC = segue.destination as! TipsViewController // swiftlint:disable:this force_cast
@@ -82,6 +80,7 @@ extension TopicsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         self.performSegue(withIdentifier: Cte.tipsSegue, sender: self)
     }
     

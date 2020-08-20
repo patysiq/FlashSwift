@@ -10,8 +10,8 @@ import UIKit
 
 class TipsViewController: UIViewController {
     
-    @IBOutlet weak var titleTip: UILabel!
-    @IBOutlet weak var tipText: UILabel!
+    @IBOutlet weak var tipsTitle: UILabel!
+    @IBOutlet weak var tipsText: UITextView!
     
     var selectedTips: String = ""
     var selectedTipsTitle: String = ""
@@ -22,14 +22,14 @@ class TipsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       // Clear the fields
-          titleTip.text = ""
-          tipText.text = ""
+        // Set fields
+        tipsTitle.text = ""
+        tipsText.text = ""
         
         // Set the title
-        titleTip.text = selectedTipsTitle
+        tipsTitle.text = selectedTipsTitle
         
         // Set the description
-        tipText.text = selectedTips
+        tipsText.text = selectedTips
     }
 }
