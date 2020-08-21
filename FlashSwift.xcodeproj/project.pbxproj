@@ -10,7 +10,6 @@
 		7B11D9EB24EECFF50035B888 /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11D9EA24EECFF50035B888 /* QuestionsTableViewCell.swift */; };
 		7B11D9EE24EED91C0035B888 /* ResponseApiQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11D9ED24EED91C0035B888 /* ResponseApiQuestion.swift */; };
 		7B11D9F024EEDE880035B888 /* ApiManagerQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11D9EF24EEDE880035B888 /* ApiManagerQuestion.swift */; };
-		7B11D9F424EEF0340035B888 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11D9F324EEF0340035B888 /* QuestionModel.swift */; };
 		7B1C597424EA1FF300098F13 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C597324EA1FF300098F13 /* TipsViewController.swift */; };
 		7B460F3324E6BF7800B6E686 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B460F3224E6BF7800B6E686 /* Constants.swift */; };
 		7B460F3524E6CCE000B6E686 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B460F3424E6CCE000B6E686 /* .swiftlint.yml */; };
@@ -61,7 +60,6 @@
 		7B11D9EA24EECFF50035B888 /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		7B11D9ED24EED91C0035B888 /* ResponseApiQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseApiQuestion.swift; sourceTree = "<group>"; };
 		7B11D9EF24EEDE880035B888 /* ApiManagerQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerQuestion.swift; sourceTree = "<group>"; };
-		7B11D9F324EEF0340035B888 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		7B1C597324EA1FF300098F13 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsViewController.swift; path = FlashSwift/Controllers/Topics/TipsViewController.swift; sourceTree = SOURCE_ROOT; };
 		7B460F3224E6BF7800B6E686 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7B460F3424E6CCE000B6E686 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				7B11D9ED24EED91C0035B888 /* ResponseApiQuestion.swift */,
-				7B11D9F324EEF0340035B888 /* QuestionModel.swift */,
 				7B11D9EF24EEDE880035B888 /* ApiManagerQuestion.swift */,
 			);
 			path = ApiQuestions;
@@ -435,7 +432,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B11D9F424EEF0340035B888 /* QuestionModel.swift in Sources */,
 				7BD72A4A24E98E40004179D2 /* TopicsViewController.swift in Sources */,
 				7B5E983F24E57FF60016804E /* AppDelegate.swift in Sources */,
 				7B1C597424EA1FF300098F13 /* TipsViewController.swift in Sources */,
