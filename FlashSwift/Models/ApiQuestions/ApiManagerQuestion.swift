@@ -23,7 +23,7 @@ class ApiManagerQuestion {
         //Get a data task from the URLSession object
         
         //Create URL object
-        let urlString = URL(string: "https://api.stackexchange.com/2.2/tags/swift/top-answerers/all_time?site=stackoverflow")
+        let urlString = URL(string: "https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=swift&site=stackoverflow")
         
         guard let url = urlString else {
             print(ApiError.invalidUrl)

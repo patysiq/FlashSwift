@@ -18,13 +18,12 @@ class VideoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func setCell(_ vid:Video) {
@@ -44,9 +43,6 @@ class VideoTableViewCell: UITableViewCell {
         let datef = DateFormatter()
         datef.dateFormat = "EEEE, MMM d, yyyyy"
         self.dateLabel.text = datef.string(from: video.publishedAt)
-        
-        // Set the thumbnail
-        guard self.video!.thumbnail != "" else {return}
         
         // Check cache before download data
         if let cachedData = CacheManagerMidia.getVideoCache(video.thumbnail) {

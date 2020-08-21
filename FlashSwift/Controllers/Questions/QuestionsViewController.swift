@@ -49,7 +49,11 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cte.questionCell , for: indexPath) as! QuestionsTableViewCell // swiftlint:disable:this force_cast
-        cell.textLabel?.text = "hey"
+
+        // Configure the cell with the data
+        let question = self.questions[indexPath.row]
+        cell.setCell(question)
+
         return cell
     }
 }

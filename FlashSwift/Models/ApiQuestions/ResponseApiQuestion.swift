@@ -14,18 +14,19 @@ struct ResponseApiQuestion: Decodable {
 }
 
 struct Question: Decodable {
-    let user: User?
-    let postCount: Int?
+    let owner: Owner?
+    let answerCount: Int?
     let score: Int?
+    let link: String? // question link
+    let title: String?
     
 }
 
-struct User: Decodable {
+struct Owner: Decodable {
     let reputation: Int?
     let userId: Int?
     let userType: String?
-    let acceptRate: Int?
     let profileImage: String?
     let displayName: String?
-    let link: String?
+    let link: String? // owner link
 }
