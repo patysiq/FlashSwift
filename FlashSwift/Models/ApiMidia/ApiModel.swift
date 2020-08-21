@@ -36,6 +36,8 @@ class ApiModelMidia {
             let session = URLSession.shared
             let dataTask = session.dataTask(with: url) { (data, response, error) in
                 
+                guard let response = response as?  HTTPURLResponse else {return}
+                
                 guard let data = data else {return}
                 
                 //check if there were any errors
@@ -62,7 +64,7 @@ class ApiModelMidia {
                     dump(response)
                     
                 } catch {
-                    
+                    print(ApiError.unknowEroor(statuscode: response.statusCode))
                 }
                 
             }
