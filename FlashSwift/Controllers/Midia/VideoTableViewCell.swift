@@ -32,31 +32,31 @@ class VideoTableViewCell: UITableViewCell {
         self.video = vid
         
         // Ensure that we have a video
-        guard self.video != nil else {return}
+        guard let video = self.video else {return}
         
         // Set the title Label
-        self.titleLabel.text = video?.title
+        self.titleLabel.text = video.title
         
         // Set the channel Label
-        self.channelLabel.text = video?.channelTitle
+        self.channelLabel.text = video.channelTitle
         
         // Set the date Label
         let datef = DateFormatter()
         datef.dateFormat = "EEEE, MMM d, yyyyy"
-        self.dateLabel.text = datef.string(from: video!.publishedAt)
+        self.dateLabel.text = datef.string(from: video.publishedAt)
         
         // Set the thumbnail
         guard self.video!.thumbnail != "" else {return}
         
         // Check cache before download data
-        if let cachedData = CacheManagerMidia.getVideoCache(self.video!.thumbnail) {
+        if let cachedData = CacheManagerMidia.getVideoCache(video.thumbnail) {
             // Set the thumbnail imageview
             self.thumbnailImageView.image = UIImage(data: cachedData)
             return
         }
         
         // Download the thumbnail data
-        let url = URL(string: self.video!.thumbnail)
+        let url = URL(string: video.thumbnail)
         
         //Get the shared URL Session object
         let session = URLSession.shared

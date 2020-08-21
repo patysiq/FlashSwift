@@ -21,53 +21,46 @@ class ApiManagerQuestion {
         var allQuestions: [Question] = []
         
         //Get a data task from the URLSession object
-    
-            //Create URL object
-        let urlString = URL(string: "\(Cte.urlBaseStackExchange)\(Cte.pathStackExchange)")
+        
+        //Create URL object
+        let urlString = URL(string: "https://api.stackexchange.com/2.2/tags/swift/top-answerers/all_time?site=stackoverflow")
+        
+        guard let url = urlString else {
+            print(ApiError.invalidUrl)
+            return
+        }
+        
+        //Get URLSession object
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: url) { (data, response, error) in
             
-            guard let url = urlString else {
-                print(ApiError.invalidUrl)
+            guard let response = response as?  HTTPURLResponse else {return}
+            
+            guard let data = data else {return}
+            
+            //check if there were any errors
+            if error != nil {
+                print(ApiError.couldNotDecode)
                 return
             }
+            //Parsing the data into video objects
             
-            //Get URLSession object
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: url) { (data, response, error) in
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            if let response = try? decoder.decode(ResponseApiQuestion.self, from: data) {
                 
-                guard let response = response as?  HTTPURLResponse else {return}
-                
-                guard let data = data else {return}
-                
-                //check if there were any errors
-                if error != nil {
-                    print(ApiError.couldNotDecode)
-                    return
+                DispatchQueue.main.async {
+                    // Call the "videosFetched" method of the delegate
+                    allQuestions += response.items!
+                    self.delegate?.questionFetched(allQuestions)
                 }
-                
-                do {
-                    //Parsing the data into video objects
-                    let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .iso8601
-                    
-                    let response = try decoder.decode(ResponseApiQuestion.self, from: data)
-                    
-                    if response.items != nil {
-                        DispatchQueue.main.async {
-                            // Call the "videosFetched" method of the delegate
-                            allQuestions += response.items!
-                            self.delegate?.questionFetched(allQuestions)
-                        }
-                    }
-                    
-                    dump(response)
-                    
-                } catch {
-                    print(ApiError.unknowEroor(statuscode: response.statusCode))
-                }
-                
+            } else {
+                print(ApiError.unknowEroor(statuscode: response.statusCode))
             }
-            //Kick off the task
-            dataTask.resume()
+        }
+        
+        //Kick off the task
+        dataTask.resume()
         
     }
     

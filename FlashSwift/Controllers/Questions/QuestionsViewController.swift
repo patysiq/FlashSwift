@@ -8,9 +8,10 @@
 
 import UIKit
 
-class QuestionsViewController: UIViewController {
+class QuestionsViewController: UIViewController, QuestionDelegate {
     
-    var networking = ApiManagerQuestion()
+    var questions = [Question]()
+    var model = ApiManagerQuestion()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,7 +20,23 @@ class QuestionsViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        }
+        
+        model.getQuestions()
+        model.delegate = self
+        
+    }
+    
+    // MARK: - Model Delegate Methods
+    func questionFetched(_ questions: [Question]) {
+        
+        // Set the returned questions to our question property
+        self.questions = questions
+        print(questions)
+        
+        // Refresh the tableview
+        tableView.reloadData()
+    }
+    
     }
 
 // MARK: - TableView Methods
@@ -27,7 +44,7 @@ class QuestionsViewController: UIViewController {
 extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return questions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

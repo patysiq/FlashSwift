@@ -9,18 +9,23 @@
 import Foundation
 
 struct ResponseApiQuestion: Decodable {
-    let items: [Question]?
+    var items: [Question]?
     
-    init(items: [Question]?) {
-        self.items = items
-    }
+}
+
+struct Question: Decodable {
+    let user: User?
+    let postCount: Int?
+    let score: Int?
     
-    enum CodingKeys:String, CodingKey {
-        case items
-    }
-    
-     init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.items = try container.decode([Question].self, forKey: .items)
-      }
+}
+
+struct User: Decodable {
+    let reputation: Int?
+    let userId: Int?
+    let userType: String?
+    let acceptRate: Int?
+    let profileImage: String?
+    let displayName: String?
+    let link: String?
 }
