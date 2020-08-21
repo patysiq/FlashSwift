@@ -56,4 +56,12 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let urlString = self.questions[indexPath.row].link else { return }
+        
+        if let url = URL(string: urlString ) {
+            UIApplication.shared.open(url)
+        }
+    }
 }
