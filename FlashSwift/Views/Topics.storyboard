@@ -117,7 +117,7 @@
         <!--Topics-->
         <scene sceneID="vaW-B4-iqf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2S3-y9-qEy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Topics" title="Topics" automaticallyAdjustsScrollViewInsets="NO" id="2S3-y9-qEy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Topics" image="doc.text" catalog="system" selectedImage="doc.text.fill" id="BY6-t5-P2X"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
