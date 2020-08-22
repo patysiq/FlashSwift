@@ -11,6 +11,8 @@
 		7B11D9EE24EED91C0035B888 /* ResponseApiQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11D9ED24EED91C0035B888 /* ResponseApiQuestion.swift */; };
 		7B11D9F024EEDE880035B888 /* ApiManagerQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11D9EF24EEDE880035B888 /* ApiManagerQuestion.swift */; };
 		7B11D9F824F00ACE0035B888 /* CacheManagerQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11D9F724F00ACE0035B888 /* CacheManagerQuestions.swift */; };
+		7B11D9FA24F0A70A0035B888 /* Onbording.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B11D9F924F0A70A0035B888 /* Onbording.storyboard */; };
+		7B11D9FC24F0A8050035B888 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11D9FB24F0A8050035B888 /* OnBoardingViewController.swift */; };
 		7B1C597424EA1FF300098F13 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C597324EA1FF300098F13 /* TipsViewController.swift */; };
 		7B460F3324E6BF7800B6E686 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B460F3224E6BF7800B6E686 /* Constants.swift */; };
 		7B460F3524E6CCE000B6E686 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B460F3424E6CCE000B6E686 /* .swiftlint.yml */; };
@@ -62,6 +64,8 @@
 		7B11D9ED24EED91C0035B888 /* ResponseApiQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseApiQuestion.swift; sourceTree = "<group>"; };
 		7B11D9EF24EEDE880035B888 /* ApiManagerQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerQuestion.swift; sourceTree = "<group>"; };
 		7B11D9F724F00ACE0035B888 /* CacheManagerQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerQuestions.swift; sourceTree = "<group>"; };
+		7B11D9F924F0A70A0035B888 /* Onbording.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onbording.storyboard; sourceTree = "<group>"; };
+		7B11D9FB24F0A8050035B888 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoardingViewController.swift; path = FlashSwift/OnBoardingViewController.swift; sourceTree = SOURCE_ROOT; };
 		7B1C597324EA1FF300098F13 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsViewController.swift; path = FlashSwift/Controllers/Topics/TipsViewController.swift; sourceTree = SOURCE_ROOT; };
 		7B460F3224E6BF7800B6E686 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7B460F3424E6CCE000B6E686 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 		7B7652B924E78F3D0011DCB6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B11D9FB24F0A8050035B888 /* OnBoardingViewController.swift */,
 				7BA7C32924EEC42600407E39 /* Questions */,
 				7BA7C32624EEC2B900407E39 /* Topics */,
 				7B1C597524EA20AA00098F13 /* Midia */,
@@ -273,6 +278,7 @@
 				7BFD4AF624E5FFA800055E23 /* Topics.storyboard */,
 				7BFD4AF824E5FFB000055E23 /* Midia.storyboard */,
 				7BFD4AF424E5FFA000055E23 /* Questions.storyboard */,
+				7B11D9F924F0A70A0035B888 /* Onbording.storyboard */,
 				7B5E984A24E57FF70016804E /* Assets.xcassets */,
 			);
 			path = Views;
@@ -388,6 +394,7 @@
 				7BFD4AF224E5FE5F00055E23 /* TabBar.storyboard in Resources */,
 				7B460F3524E6CCE000B6E686 /* .swiftlint.yml in Resources */,
 				7BFD4AF924E5FFB000055E23 /* Midia.storyboard in Resources */,
+				7B11D9FA24F0A70A0035B888 /* Onbording.storyboard in Resources */,
 				7BFD4AF524E5FFA000055E23 /* Questions.storyboard in Resources */,
 				7B5E984B24E57FF70016804E /* Assets.xcassets in Resources */,
 			);
@@ -456,6 +463,7 @@
 				7BEDAAF224EEBDEC008C6CB8 /* ApiKeys.swift in Sources */,
 				7BD72A4C24E98F91004179D2 /* TopicsModel.swift in Sources */,
 				7BA7C32824EEC41300407E39 /* QuestionsViewController.swift in Sources */,
+				7B11D9FC24F0A8050035B888 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
