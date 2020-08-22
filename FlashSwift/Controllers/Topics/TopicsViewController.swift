@@ -17,6 +17,14 @@ class TopicsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // MARK: - User Defaults
+        let isFirstLaunch = (UserDefaults.standard.value(forKey: "FirstLaunch") as? Bool) ?? false
+        if !isFirstLaunch {
+            UserDefaults.standard.set(true, forKey: "FirstLaunch")
+            performSegue(withIdentifier: Cte.OnboardingSegue, sender: nil)
+        }
+        
         tableView.delegate = self
         tableView.dataSource = self
         

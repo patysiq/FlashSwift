@@ -60,11 +60,22 @@
                     <connections>
                         <outlet property="tableView" destination="ity-gh-7p1" id="eEc-Vw-JcU"/>
                         <segue destination="AgC-FL-hKr" kind="show" identifier="tipsSegue" id="zX4-Gy-HMH"/>
+                        <segue destination="8Mo-D1-sfQ" kind="show" identifier="OnboardingSegue" id="bk1-xm-osW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgq-13-kUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966.66666666666674" y="41.517857142857139"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="qNB-xd-mmV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="8Mo-D1-sfQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="m68-Fx-gk4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQ7-bK-VIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="436"/>
         </scene>
         <!--Tips-->
         <scene sceneID="fj2-EW-BiQ">
@@ -117,7 +128,7 @@
         <!--Topics-->
         <scene sceneID="vaW-B4-iqf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2S3-y9-qEy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Topics" title="Topics" automaticallyAdjustsScrollViewInsets="NO" id="2S3-y9-qEy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Topics" image="doc.text" catalog="system" selectedImage="doc.text.fill" id="BY6-t5-P2X"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
