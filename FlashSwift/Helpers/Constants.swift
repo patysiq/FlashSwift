@@ -16,4 +16,5 @@ struct Cte {
     static let tipsSegue = "tipsSegue"
     static let questionCell = "questionCell"
     static let OnbordingSegue = "OnbordingSegue"
+    static let TopicsOnSegue = "TopicsOnSegue"
 }

@@ -15,17 +15,4 @@ class OnBoardingViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    var destinationViewController = segue.destination
-    if let navigationController = destinationViewController as? UINavigationController {
-        destinationViewController = navigationController.visibleViewController ?? destinationViewController
-    }
-    }
-    
-    @IBAction func buttonOnBording(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-            self.performSegue(withIdentifier: Cte.OnbordingSegue, sender: self)
-
-    }
-    
 }

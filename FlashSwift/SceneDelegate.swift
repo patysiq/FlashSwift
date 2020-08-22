@@ -14,17 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let launchedBefore = UserDefaults.standard.bool(forKey: "hasLaunched")
-        let launchStoryboard = UIStoryboard(name: "Onbording", bundle: nil)
-        let mainStoryboard = UIStoryboard(name: "Topics", bundle: nil)
-        var vct: UIViewController
-        if launchedBefore {
-            vct = mainStoryboard.instantiateInitialViewController()!
-        } else {
-            vct = launchStoryboard.instantiateViewController(identifier: "Onboarding")
-        }
-        UserDefaults.standard.set(true, forKey: "hasLaunched")
-        self.window?.rootViewController = vct
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

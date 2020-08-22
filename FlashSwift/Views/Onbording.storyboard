@@ -36,38 +36,23 @@
                                         <color key="textColor" name="swiftColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yf-HS-cYU">
-                                        <rect key="frame" x="0.0" y="218" width="334" height="490"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yf-HS-cYU">
+                                        <rect key="frame" x="0.0" y="218" width="334" height="560"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="Lzn-Ka-9Bg"/>
+                                        </constraints>
                                         <string key="text">Flash Swift is the best way to study this programming language.
         
-        1. Get quick access to the main Swift tips at three different levels of learning: Begginers, Intermediate and Advanced.
+1. Get quick access to the main Swift tips at three different levels of learning: Begginers, Intermediate and Advanced.
         
-        2. Watch the latest selected videos from Swift's top code channels.
+2. Watch the latest selected videos from Swift's top code channels.
+                                                                               3. Access the latest Swift-related questions from the main Q&amp;A channel.
         
-        3. Access the latest Swift-related questions from the main Q&amp;A channel.
-        
-        Enjoy the app, and keep learning!</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+Enjoy the app,  and  keep learning!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-JJ-pm9">
-                                        <rect key="frame" x="47" y="728" width="240" height="50"/>
-                                        <color key="backgroundColor" name="BG"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="ZSx-5N-AjP"/>
-                                            <constraint firstAttribute="height" constant="50" id="o39-MF-gMI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="tintColor" name="swiftColor"/>
-                                        <state key="normal" title="START LEARNING">
-                                            <color key="titleColor" name="swiftColor"/>
-                                            <color key="titleShadowColor" name="swiftColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonOnBording:" destination="eU4-US-0CL" eventType="touchUpInside" id="dnw-gR-4jZ"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -82,30 +67,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZBk-ns-cyE"/>
                     </view>
-                    <connections>
-                        <segue destination="9tF-Ys-DfL" kind="show" identifier="OnbordingSegue" id="oC7-PU-Fv4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sB0-Eh-2dn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="198.55072463768118" y="164.73214285714286"/>
         </scene>
-        <!--Topics-->
-        <scene sceneID="ocq-Vg-s30">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Topics" id="9tF-Ys-DfL" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="DNg-Qm-aLY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="itI-hb-tVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="981" y="154"/>
-        </scene>
     </scenes>
     <resources>
         <image name="flashSwift" width="512" height="512"/>
-        <namedColor name="BG">
-            <color red="0.84700000286102295" green="0.84700000286102295" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="swiftColor">
             <color red="1" green="0.3449999988079071" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
