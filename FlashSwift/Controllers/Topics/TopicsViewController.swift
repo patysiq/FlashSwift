@@ -18,13 +18,12 @@ class TopicsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: - User Defaults
         let isFirstLaunch = (UserDefaults.standard.value(forKey: "FirstLaunch") as? Bool) ?? false
         if !isFirstLaunch {
             UserDefaults.standard.set(true, forKey: "FirstLaunch")
-            UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "FirstLaunchTimestamp")
-            performSegue(withIdentifier: Cte.OnbordingSegue, sender: nil)
+            performSegue(withIdentifier: Cte.OnboardingSegue, sender: nil)
         }
-        
         
         tableView.delegate = self
         tableView.dataSource = self
