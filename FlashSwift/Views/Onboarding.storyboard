@@ -54,9 +54,10 @@ Enjoy the app,  and  keep learning!</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" name="BG"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="BG"/>
                         <constraints>
                             <constraint firstItem="ZBk-ns-cyE" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RAL-Cb-QyK" secondAttribute="bottom" constant="10" id="B6M-3S-Owz"/>
                             <constraint firstItem="RAL-Cb-QyK" firstAttribute="centerX" secondItem="ZBk-ns-cyE" secondAttribute="centerX" id="Icz-RR-Ocu"/>
@@ -75,6 +76,9 @@ Enjoy the app,  and  keep learning!</string>
     </scenes>
     <resources>
         <image name="flashSwift" width="512" height="512"/>
+        <namedColor name="BG">
+            <color red="0.84700000286102295" green="0.84700000286102295" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="swiftColor">
             <color red="1" green="0.3449999988079071" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

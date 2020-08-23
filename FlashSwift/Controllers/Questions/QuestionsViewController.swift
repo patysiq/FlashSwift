@@ -53,6 +53,11 @@ extension QuestionsViewController : UITableViewDelegate, UITableViewDataSource {
         // Configure the cell with the data
         let question = self.questions[indexPath.row]
         cell.setCell(question)
+        cell.layer.masksToBounds = true
+        cell.layer.borderColor = UIColor(named: "shadow")?.cgColor
+        cell.layer.shadowOffset = CGSize(width: -1, height: 1)
+        cell.layer.borderWidth = 4.0
+        cell.layer.cornerRadius = 35.0
 
         return cell
     }
