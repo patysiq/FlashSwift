@@ -43,14 +43,14 @@ class ApiManagerQuestion {
                 print(ApiError.couldNotDecode)
                 return
             }
-            //Parsing the data into video objects
+            //Parsing the data into question objects
             
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             if let response = try? decoder.decode(ResponseApiQuestion.self, from: data) {
                 
                 DispatchQueue.main.async {
-                    // Call the "videosFetched" method of the delegate
+                    // Call the "questionsFetched" method of the delegate
                     allQuestions += response.items!
                     self.delegate?.questionFetched(allQuestions)
                 }
