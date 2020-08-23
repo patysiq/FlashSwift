@@ -48,12 +48,12 @@ class QuestionsTableViewCell: UITableViewCell {
         
         // Set the displayName Label
         if let name = question.owner?.displayName {
-            self.displayNameOwner.text = name
+            self.displayNameOwner.text = "Name:\(name)"
         }
         
         // Set the reputation Label
         if let reputation = question.owner?.reputation {
-            self.reputationOwner.text = String("\(reputation)")
+            self.reputationOwner.text = String("Reputation: \(reputation)")
         }
      
         guard let linkProfileImage = self.question?.owner?.profileImage else {return}
