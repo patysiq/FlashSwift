@@ -19,13 +19,6 @@ class RepositoryQuestion {
         // Printa o local em que se encontra o arquivo json. É bom para você checar como ficou o arquivo. No terminal, utilize o comando open junto do caminho que você conseguiu pelo print ou pelo po do LLDB. Exemplo: open file:///.../file_manager.json
         print(fileURL)
         self.fileURL = fileURL
-//        if !FileManager.default.fileExists(atPath: fileURL.path) {
-//            let emptyQuestions: [Question] = []
-//            save(emptyQuestions)
-//        } else {
-//            save(data)
-//        }
-        // save(data)
     }
         
         func save(_ questions: [Question]) {
