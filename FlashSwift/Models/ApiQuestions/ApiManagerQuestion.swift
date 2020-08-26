@@ -19,7 +19,6 @@ class ApiManagerQuestion {
     func getQuestions() {
         
         var allQuestions: [Question] = []
-        var repository: RepositoryQuestion?
         
         //Get a data task from the URLSession object
         
@@ -51,10 +50,8 @@ class ApiManagerQuestion {
                     //  Call the "questionsFetched" method of the delegate
                     if let response = response.items {
                         allQuestions += response
-                        repository = RepositoryQuestion(filename: "question", data: allQuestions)
-                        if let questionLoad = repository?.load() {
-                            self.delegate?.questionFetched(questionLoad)
-                        }
+                        _ = RepositoryQuestion(filename: "question", data: allQuestions)
+                            self.delegate?.questionFetched(allQuestions)
                     }
                 }
             } else {
