@@ -20,6 +20,10 @@ class ApiManagerQuestion {
         
         var allQuestions: [Question] = []
         
+        let questionFile = RepositoryQuestion(filename: "question")
+        let arrayAllQuestions = questionFile.load()
+        self.delegate?.questionFetched(arrayAllQuestions)
+        
         //Get a data task from the URLSession object
         
         //Create URL object
@@ -50,8 +54,8 @@ class ApiManagerQuestion {
                     //  Call the "questionsFetched" method of the delegate
                     if let response = response.items {
                         allQuestions += response
-                        _ = RepositoryQuestion(filename: "question", data: allQuestions)
-                            self.delegate?.questionFetched(allQuestions)
+                        questionFile.save(allQuestions)
+                        self.delegate?.questionFetched(allQuestions)
                     }
                 }
             } else {
@@ -63,9 +67,3 @@ class ApiManagerQuestion {
     }
     
 }
-
-//
-//if let repositoryLoad = repository?.load() {
-//              self.delegate?.questionFetched(repositoryLoad)
-//              print(repositoryLoad)
-//                  }

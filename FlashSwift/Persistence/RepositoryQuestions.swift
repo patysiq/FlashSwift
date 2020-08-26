@@ -12,20 +12,20 @@ class RepositoryQuestion {
     
     var fileURL: URL
     
-    init(filename: String = "file_manager", data: [Question]) {
+    init(filename: String = "file_manager") {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         var fileURL = url.appendingPathComponent(filename)
         fileURL = fileURL.appendingPathExtension("json")
         // Printa o local em que se encontra o arquivo json. É bom para você checar como ficou o arquivo. No terminal, utilize o comando open junto do caminho que você conseguiu pelo print ou pelo po do LLDB. Exemplo: open file:///.../file_manager.json
         print(fileURL)
         self.fileURL = fileURL
-        if !FileManager.default.fileExists(atPath: fileURL.path) {
-            let emptyQuestions: [Question] = []
-            save(emptyQuestions)
-        } else {
-            save(data)
-        }
-        
+//        if !FileManager.default.fileExists(atPath: fileURL.path) {
+//            let emptyQuestions: [Question] = []
+//            save(emptyQuestions)
+//        } else {
+//            save(data)
+//        }
+        // save(data)
     }
         
         func save(_ questions: [Question]) {
@@ -33,7 +33,7 @@ class RepositoryQuestion {
                 let jsonData = try JSONEncoder().encode(questions)
                 try jsonData.write(to: fileURL)
             } catch {
-                print("It was not possible to save the celestial bodies.")
+                print("It was not possible to save the questions.")
             }
         }
         
