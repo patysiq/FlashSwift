@@ -12,6 +12,7 @@ class QuestionsViewController: UIViewController, QuestionDelegate {
     
     var questions = [Question]()
     var model = ApiManagerQuestion()
+    var repository: RepositoryQuestion?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,8 +22,9 @@ class QuestionsViewController: UIViewController, QuestionDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         
-        model.getQuestions()
         model.delegate = self
+        
+        model.getQuestions()
         
     }
     
