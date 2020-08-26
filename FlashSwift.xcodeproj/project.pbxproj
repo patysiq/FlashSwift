@@ -27,6 +27,7 @@
 		7B7652B824E78F350011DCB6 /* MidiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652B724E78F350011DCB6 /* MidiaViewController.swift */; };
 		7B7652BB24E7A5F70011DCB6 /* ResponseApiMidia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652BA24E7A5F70011DCB6 /* ResponseApiMidia.swift */; };
 		7B7652BE24E8AB190011DCB6 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652BD24E8AB190011DCB6 /* ApiError.swift */; };
+		7B7D7EB424F57638007D5ACA /* RepositoryQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D7EB324F57638007D5ACA /* RepositoryQuestions.swift */; };
 		7BA7C32824EEC41300407E39 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7C32724EEC41300407E39 /* QuestionsViewController.swift */; };
 		7BD72A4A24E98E40004179D2 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD72A4924E98E40004179D2 /* TopicsViewController.swift */; };
 		7BD72A4C24E98F91004179D2 /* TopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD72A4B24E98F91004179D2 /* TopicsModel.swift */; };
@@ -88,6 +89,7 @@
 		7B7652B724E78F350011DCB6 /* MidiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiaViewController.swift; sourceTree = "<group>"; };
 		7B7652BA24E7A5F70011DCB6 /* ResponseApiMidia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseApiMidia.swift; sourceTree = "<group>"; };
 		7B7652BD24E8AB190011DCB6 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		7B7D7EB324F57638007D5ACA /* RepositoryQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryQuestions.swift; sourceTree = "<group>"; };
 		7BA7C32724EEC41300407E39 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		7BD72A4924E98E40004179D2 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		7BD72A4B24E98F91004179D2 /* TopicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsModel.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		7B5E983D24E57FF60016804E /* FlashSwift */ = {
 			isa = PBXGroup;
 			children = (
+				7B7D7EB524F57688007D5ACA /* Persistence */,
 				7B460F3424E6CCE000B6E686 /* .swiftlint.yml */,
 				7B5E983E24E57FF60016804E /* AppDelegate.swift */,
 				7B5E984024E57FF60016804E /* SceneDelegate.swift */,
@@ -242,6 +245,14 @@
 				7B7652B524E78CE50011DCB6 /* ApiModel.swift */,
 			);
 			path = ApiMidia;
+			sourceTree = "<group>";
+		};
+		7B7D7EB524F57688007D5ACA /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				7B7D7EB324F57638007D5ACA /* RepositoryQuestions.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		7BA7C32624EEC2B900407E39 /* Topics */ = {
@@ -453,6 +464,7 @@
 				7BEA64D724E8D04800DCA8F7 /* VideoTableViewCell.swift in Sources */,
 				7B7652BE24E8AB190011DCB6 /* ApiError.swift in Sources */,
 				7B7652BB24E7A5F70011DCB6 /* ResponseApiMidia.swift in Sources */,
+				7B7D7EB424F57638007D5ACA /* RepositoryQuestions.swift in Sources */,
 				7B5E984924E57FF60016804E /* FlashSwift.xcdatamodeld in Sources */,
 				7B11D9EE24EED91C0035B888 /* ResponseApiQuestion.swift in Sources */,
 				7BF2CD4524E96EAD0076249F /* DetailViewController.swift in Sources */,

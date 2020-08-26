@@ -31,7 +31,6 @@ class QuestionsViewController: UIViewController, QuestionDelegate {
         
         // Set the returned questions to our question property
         self.questions = questions
-        print(questions)
         
         // Refresh the tableview
         tableView.reloadData()
