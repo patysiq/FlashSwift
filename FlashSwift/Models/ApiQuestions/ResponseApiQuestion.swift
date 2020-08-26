@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct ResponseApiQuestion: Decodable {
+struct ResponseApiQuestion: Codable {
     var items: [Question]?
     
 }
 
-struct Question: Decodable {
+struct Question: Codable {
     let owner: Owner?
     let answerCount: Int?
     let score: Int?
@@ -22,7 +22,7 @@ struct Question: Decodable {
     
 }
 
-struct Owner: Decodable {
+struct Owner: Codable {
     let reputation: Int?
     let userId: Int?
     let userType: String?

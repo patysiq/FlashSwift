@@ -19,6 +19,7 @@ class ApiManagerQuestion {
     func getQuestions() {
         
         var allQuestions: [Question] = []
+        var repository: RepositoryQuestion?
         
         //Get a data task from the URLSession object
         
@@ -29,39 +30,45 @@ class ApiManagerQuestion {
             print(ApiError.invalidUrl)
             return
         }
-        
         //Get URLSession object
         let session = URLSession.shared
         let dataTask = session.dataTask(with: url) { (data, response, error) in
-            
-            guard let response = response as?  HTTPURLResponse else {return}
-            
-            guard let data = data else {return}
             
             //check if there were any errors
             if error != nil {
                 print(ApiError.couldNotDecode)
                 return
             }
-            //Parsing the data into question objects
             
+            guard let response = response as?  HTTPURLResponse else {return}
+            guard let data = data else {return}
+            
+            //Parsing the data into question objects
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             if let response = try? decoder.decode(ResponseApiQuestion.self, from: data) {
-                
                 DispatchQueue.main.async {
-                    // Call the "questionsFetched" method of the delegate
-                    allQuestions += response.items!
-                    self.delegate?.questionFetched(allQuestions)
+                    //  Call the "questionsFetched" method of the delegate
+                    if let response = response.items {
+                        allQuestions += response
+                        repository = RepositoryQuestion(filename: "question", data: allQuestions)
+                        if let questionLoad = repository?.load() {
+                            self.delegate?.questionFetched(questionLoad)
+                        }
+                    }
                 }
             } else {
                 print(ApiError.unknowEroor(statuscode: response.statusCode))
             }
         }
-        
         //Kick off the task
         dataTask.resume()
-        
     }
     
 }
+
+//
+//if let repositoryLoad = repository?.load() {
+//              self.delegate?.questionFetched(repositoryLoad)
+//              print(repositoryLoad)
+//                  }
