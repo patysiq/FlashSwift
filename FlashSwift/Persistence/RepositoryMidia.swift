@@ -1,14 +1,13 @@
 //
-//  Repository.swift
+//  RepositoryMidia.swift
 //  FlashSwift
 //
-//  Created by PATRICIA S SIQUEIRA on 25/08/20.
+//  Created by PATRICIA S SIQUEIRA on 27/08/20.
 //  Copyright © 2020 PATRICIA S SIQUEIRA. All rights reserved.
 //
-
 import Foundation
 
-class RepositoryQuestion {
+class RepositoryMidia {
     
     var fileURL: URL
     
@@ -21,24 +20,24 @@ class RepositoryQuestion {
         self.fileURL = fileURL
     }
         
-        func save(_ questions: [Question]) {
+        func save(_ videos: [Video]) {
             do {
-                let jsonData = try JSONEncoder().encode(questions)
+                let jsonData = try JSONEncoder().encode(videos)
                 try jsonData.write(to: fileURL)
             } catch {
-                print("It was not possible to save the questions.")
+                print("It was not possible to save the videos.")
             }
         }
         
-     func load() -> [Question] {
-            var questions: [Question] = []
+     func load() -> [Video] {
+            var videos: [Video] = []
             do {
                 let jsonData = try Data(contentsOf: fileURL)
-                questions = try JSONDecoder().decode([Question].self, from: jsonData)
-                return questions
+                videos = try JSONDecoder().decode([Video].self, from: jsonData)
+                return videos
             } catch {
-                print("It was not possible to load the questions.")
-                return questions
+                print("It was not possible to load the videos.")
+                return videos
             }
         }
     

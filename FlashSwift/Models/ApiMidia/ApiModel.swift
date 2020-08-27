@@ -19,6 +19,12 @@ class ApiModelMidia {
     func getVideos() {
         
         var allVideos: [Video] = []
+        
+        //Data persistence
+        let videoFile = RepositoryMidia(filename: "videos")
+        let arrayAllVideo = videoFile.load()
+        self.delegate?.videosFetched(arrayAllVideo)
+        
         let channels = ["UC2D6eRvCeMtcF5OGHf1-trw","UCmJi5RdDLgzvkl3Ly0DRMlQ", "UCTfmK7YoPhSkRsIul50_rSA", "UCbTw29mcP12YlTt1EpUaVJw", "UCuP2vJ6kRutQBfRmdcI92mA", ""]
         
         //Get a data task from the URLSession object
@@ -57,6 +63,7 @@ class ApiModelMidia {
                         DispatchQueue.main.async {
                             // Call the "videosFetched" method of the delegate
                             allVideos += response.items!
+                            videoFile.save(allVideos)
                             self.delegate?.videosFetched(allVideos)
                         }
                     }
