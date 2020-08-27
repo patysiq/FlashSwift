@@ -61,6 +61,7 @@ class QuestionsTableViewCell: UITableViewCell {
         // Check cache before download data
         if let cachedData = CacheManagerQuestion.getQuestionCache(linkProfileImage) {
             // Set the thumbnail imageview
+            self.profileImageOwner.layer.cornerRadius = 8.0
             self.profileImageOwner.image = UIImage(data: cachedData)
             return
         }
@@ -98,6 +99,7 @@ class QuestionsTableViewCell: UITableViewCell {
                 
                 // Set the imageview
                 DispatchQueue.main.async {
+                    self.profileImageOwner.layer.cornerRadius = 8.0
                     self.profileImageOwner.image = question
                 }
             
@@ -109,6 +111,7 @@ class QuestionsTableViewCell: UITableViewCell {
         }
              
         dataTask.resume()
+        
     }
     
 }

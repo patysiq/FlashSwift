@@ -48,6 +48,7 @@ class VideoTableViewCell: UITableViewCell {
         if let cachedData = CacheManagerMidia.getVideoCache(video.thumbnail) {
             // Set the thumbnail imageview
             self.thumbnailImageView.image = UIImage(data: cachedData)
+            self.thumbnailImageView.layer.cornerRadius = 8.0
             return
         }
         
@@ -84,6 +85,7 @@ class VideoTableViewCell: UITableViewCell {
                 
                 // Set the imageview
                 DispatchQueue.main.async {
+                    self.thumbnailImageView.layer.cornerRadius = 8.0
                     self.thumbnailImageView.image = image
                 }
             
