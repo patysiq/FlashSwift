@@ -49,6 +49,7 @@ class VideoTableViewCell: UITableViewCell {
             // Set the thumbnail imageview
             self.thumbnailImageView.image = UIImage(data: cachedData)
             self.thumbnailImageView.layer.cornerRadius = 8.0
+            self.thumbnailImageView.clipsToBounds = true
             return
         }
         

@@ -29,6 +29,11 @@
 		7B7652BE24E8AB190011DCB6 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7652BD24E8AB190011DCB6 /* ApiError.swift */; };
 		7B7D7EB424F57638007D5ACA /* RepositoryQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D7EB324F57638007D5ACA /* RepositoryQuestions.swift */; };
 		7B7D7EBB24F786CD007D5ACA /* RepositoryMidia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D7EBA24F786CD007D5ACA /* RepositoryMidia.swift */; };
+		7B7D7EBD24F7AD1F007D5ACA /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D7EBC24F7AD1F007D5ACA /* Test.swift */; };
+		7B7D7EC524FC443A007D5ACA /* FlashSwiftAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D7EC424FC443A007D5ACA /* FlashSwiftAsyncTests.swift */; };
+		7B7D7ECF24FC4991007D5ACA /* ApiMidiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D7ECE24FC4991007D5ACA /* ApiMidiaTests.swift */; };
+		7B7D7ED524FC6470007D5ACA /* ApiQuestionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D7ED424FC6470007D5ACA /* ApiQuestionTest.swift */; };
+		7B7D7ED724FC7346007D5ACA /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D7ED624FC7346007D5ACA /* ModelTests.swift */; };
 		7BA7C32824EEC41300407E39 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7C32724EEC41300407E39 /* QuestionsViewController.swift */; };
 		7BD72A4A24E98E40004179D2 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD72A4924E98E40004179D2 /* TopicsViewController.swift */; };
 		7BD72A4C24E98F91004179D2 /* TopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD72A4B24E98F91004179D2 /* TopicsModel.swift */; };
@@ -53,6 +58,13 @@
 			remoteInfo = FlashSwift;
 		};
 		7B5E986024E57FF70016804E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5E983324E57FF60016804E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5E983A24E57FF60016804E;
+			remoteInfo = FlashSwift;
+		};
+		7B7D7EC724FC443A007D5ACA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B5E983324E57FF60016804E /* Project object */;
 			proxyType = 1;
@@ -92,6 +104,13 @@
 		7B7652BD24E8AB190011DCB6 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		7B7D7EB324F57638007D5ACA /* RepositoryQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryQuestions.swift; sourceTree = "<group>"; };
 		7B7D7EBA24F786CD007D5ACA /* RepositoryMidia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMidia.swift; sourceTree = "<group>"; };
+		7B7D7EBC24F7AD1F007D5ACA /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		7B7D7EC224FC443A007D5ACA /* FlashSwiftAsyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashSwiftAsyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7D7EC424FC443A007D5ACA /* FlashSwiftAsyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSwiftAsyncTests.swift; sourceTree = "<group>"; };
+		7B7D7EC624FC443A007D5ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B7D7ECE24FC4991007D5ACA /* ApiMidiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMidiaTests.swift; sourceTree = "<group>"; };
+		7B7D7ED424FC6470007D5ACA /* ApiQuestionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuestionTest.swift; sourceTree = "<group>"; };
+		7B7D7ED624FC7346007D5ACA /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		7BA7C32724EEC41300407E39 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		7BD72A4924E98E40004179D2 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		7BD72A4B24E98F91004179D2 /* TopicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsModel.swift; sourceTree = "<group>"; };
@@ -128,6 +147,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B7D7EBF24FC443A007D5ACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -157,6 +183,7 @@
 				7B5E983D24E57FF60016804E /* FlashSwift */,
 				7B5E985724E57FF70016804E /* FlashSwiftTests */,
 				7B5E986224E57FF70016804E /* FlashSwiftUITests */,
+				7B7D7EC324FC443A007D5ACA /* FlashSwiftAsyncTests */,
 				7B5E983C24E57FF60016804E /* Products */,
 				7BEDC13B24E9735400EAA8DF /* Frameworks */,
 			);
@@ -168,6 +195,7 @@
 				7B5E983B24E57FF60016804E /* FlashSwift.app */,
 				7B5E985424E57FF70016804E /* FlashSwiftTests.xctest */,
 				7B5E985F24E57FF70016804E /* FlashSwiftUITests.xctest */,
+				7B7D7EC224FC443A007D5ACA /* FlashSwiftAsyncTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,6 +222,8 @@
 			children = (
 				7B5E985824E57FF70016804E /* FlashSwiftTests.swift */,
 				7B5E985A24E57FF70016804E /* Info.plist */,
+				7B7D7EBC24F7AD1F007D5ACA /* Test.swift */,
+				7B7D7ED624FC7346007D5ACA /* ModelTests.swift */,
 			);
 			path = FlashSwiftTests;
 			sourceTree = "<group>";
@@ -256,6 +286,17 @@
 				7B7D7EBA24F786CD007D5ACA /* RepositoryMidia.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		7B7D7EC324FC443A007D5ACA /* FlashSwiftAsyncTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B7D7EC424FC443A007D5ACA /* FlashSwiftAsyncTests.swift */,
+				7B7D7EC624FC443A007D5ACA /* Info.plist */,
+				7B7D7ECE24FC4991007D5ACA /* ApiMidiaTests.swift */,
+				7B7D7ED424FC6470007D5ACA /* ApiQuestionTest.swift */,
+			);
+			path = FlashSwiftAsyncTests;
 			sourceTree = "<group>";
 		};
 		7BA7C32624EEC2B900407E39 /* Topics */ = {
@@ -355,6 +396,24 @@
 			productReference = 7B5E985F24E57FF70016804E /* FlashSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7B7D7EC124FC443A007D5ACA /* FlashSwiftAsyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7D7EC924FC443A007D5ACA /* Build configuration list for PBXNativeTarget "FlashSwiftAsyncTests" */;
+			buildPhases = (
+				7B7D7EBE24FC443A007D5ACA /* Sources */,
+				7B7D7EBF24FC443A007D5ACA /* Frameworks */,
+				7B7D7EC024FC443A007D5ACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B7D7EC824FC443A007D5ACA /* PBXTargetDependency */,
+			);
+			name = FlashSwiftAsyncTests;
+			productName = FlashSwiftAsyncTests;
+			productReference = 7B7D7EC224FC443A007D5ACA /* FlashSwiftAsyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -376,6 +435,10 @@
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 7B5E983A24E57FF60016804E;
 					};
+					7B7D7EC124FC443A007D5ACA = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 7B5E983A24E57FF60016804E;
+					};
 				};
 			};
 			buildConfigurationList = 7B5E983624E57FF60016804E /* Build configuration list for PBXProject "FlashSwift" */;
@@ -394,6 +457,7 @@
 				7B5E983A24E57FF60016804E /* FlashSwift */,
 				7B5E985324E57FF70016804E /* FlashSwiftTests */,
 				7B5E985E24E57FF70016804E /* FlashSwiftUITests */,
+				7B7D7EC124FC443A007D5ACA /* FlashSwiftAsyncTests */,
 			);
 		};
 /* End PBXProject section */
@@ -422,6 +486,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7B5E985D24E57FF70016804E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7D7EC024FC443A007D5ACA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -487,7 +558,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B7D7ED724FC7346007D5ACA /* ModelTests.swift in Sources */,
 				7B5E985924E57FF70016804E /* FlashSwiftTests.swift in Sources */,
+				7B7D7EBD24F7AD1F007D5ACA /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +569,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5E986424E57FF70016804E /* FlashSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7D7EBE24FC443A007D5ACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7D7EC524FC443A007D5ACA /* FlashSwiftAsyncTests.swift in Sources */,
+				7B7D7ED524FC6470007D5ACA /* ApiQuestionTest.swift in Sources */,
+				7B7D7ECF24FC4991007D5ACA /* ApiMidiaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +594,11 @@
 			isa = PBXTargetDependency;
 			target = 7B5E983A24E57FF60016804E /* FlashSwift */;
 			targetProxy = 7B5E986024E57FF70016804E /* PBXContainerItemProxy */;
+		};
+		7B7D7EC824FC443A007D5ACA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5E983A24E57FF60016804E /* FlashSwift */;
+			targetProxy = 7B7D7EC724FC443A007D5ACA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -760,6 +848,46 @@
 			};
 			name = Release;
 		};
+		7B7D7ECA24FC443A007D5ACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				INFOPLIST_FILE = FlashSwiftAsyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.FlashSwiftAsyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlashSwift.app/FlashSwift";
+			};
+			name = Debug;
+		};
+		7B7D7ECB24FC443A007D5ACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				INFOPLIST_FILE = FlashSwiftAsyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.FlashSwiftAsyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlashSwift.app/FlashSwift";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -795,6 +923,15 @@
 			buildConfigurations = (
 				7B5E986F24E57FF70016804E /* Debug */,
 				7B5E987024E57FF70016804E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7D7EC924FC443A007D5ACA /* Build configuration list for PBXNativeTarget "FlashSwiftAsyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7D7ECA24FC443A007D5ACA /* Debug */,
+				7B7D7ECB24FC443A007D5ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -100,6 +100,7 @@ class QuestionsTableViewCell: UITableViewCell {
                 // Set the imageview
                 DispatchQueue.main.async {
                     self.profileImageOwner.layer.cornerRadius = 8.0
+                    self.profileImageOwner.clipsToBounds = true
                     self.profileImageOwner.image = question
                 }
             
