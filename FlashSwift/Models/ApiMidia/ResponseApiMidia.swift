@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ResponseApiMidia: Decodable {
+struct ResponseApiMidia: Codable {
     
     var items:[Video]?
     

@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -45,6 +46,16 @@
                BlueprintIdentifier = "7B5E985E24E57FF70016804E"
                BuildableName = "FlashSwiftUITests.xctest"
                BlueprintName = "FlashSwiftUITests"
+               ReferencedContainer = "container:FlashSwift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7B7D7EC124FC443A007D5ACA"
+               BuildableName = "FlashSwiftAsyncTests.xctest"
+               BlueprintName = "FlashSwiftAsyncTests"
                ReferencedContainer = "container:FlashSwift.xcodeproj">
             </BuildableReference>
          </TestableReference>
