@@ -14,7 +14,7 @@ class MidiaViewController: UIViewController, ModelDelegate {
     
     var videos = [Video]()
     var model = ApiModelMidia()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,9 +22,9 @@ class MidiaViewController: UIViewController, ModelDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         
-        model.getVideos()
         model.delegate = self
-             
+        model.getVideos()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
